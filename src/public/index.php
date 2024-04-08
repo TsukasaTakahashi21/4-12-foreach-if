@@ -8,11 +8,11 @@ $examScoreList = [
 ];
 $resultList = [];
 foreach ($examScoreList as $subject => $score) {
-    if ($score >= 30) {
-        echo "{$subject}は合格"."\n";
-    } else {
+    if ($score < 30) {
         echo "{$subject}は不合格"."\n";
+        continue;
     }
+    echo "{$subject}は合格"."\n";
 }
 ?>
 
